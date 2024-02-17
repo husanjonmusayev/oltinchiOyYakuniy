@@ -1,0 +1,48 @@
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.Calculation {
+  border: 2px solid var(--long-hover);
+  box-shadow: 5px 5px 10px var(--long-hover);
+  width: 300px;
+  height: max-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: var(--calculation);
+}
+.thum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--long-hover);
+  padding: 5px 0px;
+}
+
+.all-sum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.all-sum p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.all-sum p,
+.thum p {
+  color: var(--card-title-home);
+}
+
+.pages button {
+  width: 300px;
+  margin-top: 50px;
+  background-color: var(--btn-color);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--white-title-color);
+  font-weight: 500;
+}

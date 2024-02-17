@@ -45,6 +45,16 @@ function LayoutRoutes() {
   return (
     <div className="container" data-theme={dark ? "light" : "dark"}>
       <header>
+        <div className="reg">
+          <div className="form-link">
+            <div className="col flex gap-1">
+              <Link to="/">{t("sigin in")}</Link>
+              <a>/</a>
+              <Link to="/">{t("guest")}</Link>
+            </div>
+            <Link to="/">{t("create acaunt")}</Link>
+          </div>
+        </div>
         <div className="content">
           <div className="logo">
             <h1>C</h1>

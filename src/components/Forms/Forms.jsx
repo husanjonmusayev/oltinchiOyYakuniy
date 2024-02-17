@@ -1,8 +1,11 @@
 import "./Forms.css";
 import { useRef } from "react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Forms() {
+  const { t, i18n } = useTranslation();
+  const [lang, setLang] = useState("en");
   const [inputValue, setInputValue] = useState(1000);
   const inputRef = useRef("");
   const catigoryRef = useRef("");
@@ -32,9 +35,7 @@ function Forms() {
     }
   }
 
-  function hendalRange(e) {
-    
-  }
+  function hendalRange(e) {}
 
   // console.log(
   //   inputRef.current.value,
@@ -47,7 +48,7 @@ function Forms() {
     <form>
       <div className="form-header ">
         <div className="search-input">
-          <p>Search product</p>
+          <p>{t("search product")}</p>
           <input
             ref={inputRef}
             type="text"
@@ -56,7 +57,7 @@ function Forms() {
           />
         </div>
         <div className="select-catigory">
-          <p>Select Catigory</p>
+          <p>{t("select catighory")}</p>
           <select
             ref={catigoryRef}
             className="select select-bordered select-sm w-full max-w-xs"
@@ -70,7 +71,7 @@ function Forms() {
           </select>
         </div>
         <div className="select-catigory">
-          <p>Select Company</p>
+          <p>{t("select company")}</p>
           <select
             ref={celectConpanyRef}
             className="select select-bordered select-sm w-full max-w-xs"
@@ -86,7 +87,7 @@ function Forms() {
           </select>
         </div>
         <div className="select-catigory">
-          <p>Sort by</p>
+          <p>{t("sort by")}</p>
           <select
             ref={cortRef}
             className="select select-bordered select-sm w-full max-w-xs"
@@ -120,16 +121,16 @@ function Forms() {
           />
         </div>
         <div className="form-control flex flex-col items-center">
-          <span className="label-text">free shoping</span>
+          <span className="label-text">{t("free")}</span>
           <label className="cursor-pointer label ">
             <input type="checkbox" className="checkbox checkbox-info" />
           </label>
         </div>
         <div className="btn-group">
           <button onClick={hendalSearch} className="search-btn">
-            Search
+            {t("search")}
           </button>
-          <button className="reset-btn">Reset</button>
+          <button className="reset-btn">{t("reset")}</button>
         </div>
       </div>
     </form>

@@ -2,6 +2,29 @@
   width: 100vw;
 }
 
+.reg {
+  margin: 0;
+  padding: 10px;
+  background: var(--active-color);
+}
+
+.form-link {
+  padding: 0px 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.form-link a {
+  color: var(--active-title-color);
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+}
+
+.form-link a:hover {
+  border-bottom: 1px solid white;
+}
+
 .content {
   width: 1200px;
   margin: 0 auto;

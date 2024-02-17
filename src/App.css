@@ -1,5 +1,6 @@
 :root {
-   --card-title-home:#f0f6ff:
+  --white-title-color:rgb(238, 238, 238);
+   --card-title-home:#f0f6ff;
   --body-bg-color: white;
   --home-title-big-color: #394e6a;
   --header-bg-color: #f0f6ff;
@@ -14,9 +15,11 @@
   --prise-color:#dbe1ff;
   --red:red;
   --long-hover:lightgray;
+  --calculation:#F0F6FF;
 }
 
 [data-theme="light"]{
+  --calculation:#F0F6FF;
   --long-hover:lightgray;
   --red:rgb(211, 121, 121);
   --card-title-home:#f0f6ff:
@@ -35,6 +38,7 @@
 }
 
 [data-theme="dark"] {
+  --calculation:#000000;
   --long-hover:rgb(0, 0, 0);
   --red:rgb(172, 86, 86);
  --prise-color:#b573aa;

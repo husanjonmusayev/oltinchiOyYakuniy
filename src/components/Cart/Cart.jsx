@@ -1,11 +1,22 @@
 import React from "react";
+import "./cart.css";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Cart() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState(null);
+
+  function hendalLoginClick() {
+    navigate("/loginSignIn");
+  }
+
+  //  get product localstorage
+
   useEffect(() => {
     setProducts(JSON.parse(localStorage.getItem("prod")));
   }, []);
+
   return (
     <>
       {products ? (
@@ -36,6 +47,27 @@ function Cart() {
               );
             })}
           </section>
+          <div className="pages">
+            <div className="Calculation sheet">
+              <div className="thum">
+                <p>Subtotal</p>
+                <p>prise</p>
+              </div>
+              <div className="thum">
+                <p>Shipping</p>
+                <p>prise</p>
+              </div>
+              <div className="thum">
+                <p>Tax</p>
+                <p>prise</p>
+              </div>
+              <div className="all-sum">
+                <p>Order Total</p>
+                <p>prise</p>
+              </div>
+            </div>
+            <button onClick={hendalLoginClick}>PLASE LOGIN</button>
+          </div>
         </div>
       ) : (
         <>

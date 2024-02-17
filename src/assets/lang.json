@@ -4,7 +4,17 @@
       "home": "Home",
       "about": "About",
       "products": "Products",
-      "cart": "Cart"
+      "cart": "Cart",
+      "sigin in": "Sign In",
+      "guest": "Guest",
+      "create acaunt": "Create acaunt",
+      "search product": "Search Product",
+      "select catighory": "Select catigory",
+      "select company": "Select Company",
+      "sort by": "Sort By",
+      "free": "free",
+      "search": "Search",
+      "reset": "Reset"
     }
   },
   "ru": {
@@ -12,7 +22,17 @@
       "home": "Дом",
       "about": "Про",
       "products": "продукты",
-      "cart": "Корзина"
+      "cart": "Корзина",
+      "sigin in": "войти",
+      "guest": "Гость",
+      "create acaunt": "зарегистрироваться",
+      "search product": "Поиск продукта",
+      "select catighory": "Выберите категорию",
+      "select company": "Выберите компанию",
+      "sort by": "Сортировать по",
+      "free": "бесплатно",
+      "search": "Поиск",
+      "reset": "Перезагрузить"
     }
   },
 
@@ -20,8 +40,18 @@
     "translation": {
       "home": "Asosiy sahifa",
       "about": "Haqida",
-      "products": "mahsulotlar",
-      "cart": "Savat"
+      "products": "Mahsulotlar",
+      "cart": "Savat",
+      "sigin in": "Tizimga kirish",
+      "guest": "Mehmon",
+      "create acaunt": "Hisob yaratish",
+      "search product": "Mahsulot Qidirish",
+      "select catighory": "Katigorya Bo'yicha",
+      "select company": "Conpaniya Bo'yicha",
+      "sort by": "Turi bo'yicha",
+      "free": "Bepul",
+      "search": "Qidirish",
+      "reset": "Tozalash"
     }
   }
 }
