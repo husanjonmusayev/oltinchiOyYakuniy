@@ -12,9 +12,11 @@
   --reset-btn: #c149ad;
   --nav-title-color: #071935;
   --prise-color:#dbe1ff;
+  --red:red;
 }
 
 [data-theme="light"]{
+  --red:rgb(211, 121, 121);
   --card-title-home:#f0f6ff:
   --body-bg-color: white;
   --home-title-big-color: #394e6a;
@@ -31,6 +33,7 @@
 }
 
 [data-theme="dark"] {
+  --red:rgb(172, 86, 86);
  --prise-color:#b573aa;
  --card-title-home:#f3f6fc;
   --nav-title-color: #ededed;

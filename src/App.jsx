@@ -11,11 +11,13 @@ import Products from "./components/Product/Products";
 import Cart from "./components/Cart/Cart";
 import LayoutRoutes from "./Layout/LayoutRoutes";
 import ProductOne from "./components/ProductOne/ProductOne";
+import NoutFound from "./components/Noutfound/NoutFound";
 
 function App() {
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <Route element={<LayoutRoutes />}>
+        <Route path="*" element={<NoutFound />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/product" element={<Products />} />

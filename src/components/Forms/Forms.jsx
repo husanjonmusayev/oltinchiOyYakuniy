@@ -1,7 +1,9 @@
 import "./Forms.css";
 import { useRef } from "react";
+import { useState } from "react";
 
 function Forms() {
+  const [inputValue, setInputValue] = useState(1000);
   const inputRef = useRef("");
   const catigoryRef = useRef("");
   const celectConpanyRef = useRef("");
@@ -9,15 +11,31 @@ function Forms() {
 
   // search function
 
-  function hendalSearch(e) {
+  async function hendalSearch(e) {
     e.preventDefault();
-    fetch(
-      "https://strapi-store-server.onrender.com/api/products?search=&category=Kids&company=Artifex&order=low&price=47000&shipping=on"
-    )
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+
+    try {
+      const response = await fetch(
+        `https://strapi-store-server.onrender.com/api/products?search=${
+          inputRef.current.value
+        }&category=${catigoryRef.current.value}&company=${
+          celectConpanyRef.current.value
+        }&order=${cortRef.current.value}&price=${500}000`
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   }
+
+  function hendalRange(e) {
+    
+  }
+
   // console.log(
   //   inputRef.current.value,
   //   catigoryRef.current.value,
@@ -85,7 +103,21 @@ function Forms() {
       </div>
       <div className="form-main items-center mt-10">
         <div className="ran">
-          <input type="range" min={0} max="100" className="range range-info" />
+          <p>${inputValue}0.00</p>
+          <input
+            type="range"
+            onChange={hendalRange}
+            defaultValue={1000}
+            aria-label="Default"
+            valueLabe
+            Display="on"
+            step={1}
+            value={inputValue}
+            marks={false}
+            min={0}
+            max={100}
+            className="range range-info"
+          />
         </div>
         <div className="form-control flex flex-col items-center">
           <span className="label-text">free shoping</span>

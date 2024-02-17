@@ -55,7 +55,13 @@
 }
 .card {
   cursor: pointer;
+  transition: all 0.5s;
 }
+
+.card:hover {
+  transform: scale(0.9);
+}
+
 .card-title {
   color: var(--card-title-home);
 }

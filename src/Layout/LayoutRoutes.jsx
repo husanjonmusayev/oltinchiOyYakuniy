@@ -1,5 +1,5 @@
 import "./Route.css";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Link, Outlet } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import useLocalStorage from "use-local-storage";
 import { useTranslation } from "react-i18next";
@@ -31,7 +31,6 @@ function LayoutRoutes() {
   // dark mode
   function hendalChekbox(e) {
     setIsChecked(e.target.checked);
-    
     isChecked ? setDark(false) : setDark(true);
   }
 
@@ -97,14 +96,20 @@ function LayoutRoutes() {
                 </svg>
               </label>
             </div>
-            <div className="indicator">
-              <span className="indicator-item badge badge-primary">+1</span>
-              <div className="grid w-12 h-12  place-items-center">
-                <img className="w-8 h-8" src="/shopp.png" alt="" />
+            <Link to="/cart">
+              <div className="indicator">
+                <span className="indicator-item badge badge-primary">+1</span>
+                <div className="grid w-12 h-12  place-items-center">
+                  <img className="w-10 h-9" src="/shop.png" alt="" />
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="App">
-              <Select onChange={hendalclick} options={options} />
+              <Select
+                className="header-select"
+                onChange={hendalclick}
+                options={options}
+              />
             </div>
           </div>
         </div>

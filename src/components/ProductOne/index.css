@@ -12,7 +12,7 @@
 }
 
 .oneCard {
-  height: 100vh;
+  height: 80vh;
 
   display: flex;
   justify-content: space-between;
@@ -93,4 +93,56 @@
 }
 .icons {
   border: none;
+}
+
+.shop {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-item {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 700px;
+  box-shadow: 5px 5px 10px lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.card-item:hover {
+  transform: scale(1.1);
+}
+.card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-title h3,
+p {
+  font-size: 14px;
+}
+
+.card-title input {
+  width: 30px;
+  border: none;
+  outline: none;
+  height: 20px;
+}
+
+.card-caunt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-caunt p,
+h4 {
+  font-size: 14px;
+}
+.card-caunt h4 {
+  color: var(--red);
 }

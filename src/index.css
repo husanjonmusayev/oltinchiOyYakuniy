@@ -17,3 +17,20 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.not-found {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.not-found h1 {
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 30px;
+}
+.not-found h2 {
+  font-size: 30px;
+}
