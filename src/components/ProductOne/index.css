@@ -1,0 +1,96 @@
+.home-wrapper nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+.card-image img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.oneCard {
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+}
+.Onecard-title {
+  width: 500px;
+}
+.Onecard-title h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.Onecard-title h4 {
+  color: var(--home-title-big-color);
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.Onecard-title h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.Onecard-title p {
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+
+.Onecard-title input {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 20px;
+  border: none;
+  outline: none;
+}
+
+.Loader {
+  display: flex;
+  align-items: start;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  top: calc(50% + 250px);
+  left: calc(50%);
+}
+.loading {
+  margin-top: 50px;
+}
+
+.color-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+.color-input::--webkit-color-swatch {
+  border-radius: 50%;
+}
+.products-title h2 {
+  font-size: 20px;
+}
+.products-title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(225, 225, 225);
+  margin-bottom: 20px;
+}
+.products-title .btn {
+  width: 48px;
+  height: 10px;
+}
+.icons {
+  border: none;
+}

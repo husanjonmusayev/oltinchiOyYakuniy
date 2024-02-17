@@ -1,0 +1,27 @@
+{
+  "en": {
+    "translation": {
+      "home": "Home",
+      "about": "About",
+      "products": "Products",
+      "cart": "Cart"
+    }
+  },
+  "ru": {
+    "translation": {
+      "home": "Дом",
+      "about": "Про",
+      "products": "продукты",
+      "cart": "Корзина"
+    }
+  },
+
+  "uz": {
+    "translation": {
+      "home": "Asosiy sahifa",
+      "about": "Haqida",
+      "products": "mahsulotlar",
+      "cart": "Savat"
+    }
+  }
+}

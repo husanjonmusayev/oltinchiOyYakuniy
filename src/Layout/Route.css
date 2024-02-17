@@ -1,0 +1,73 @@
+.container {
+  width: 100vw;
+}
+
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+header {
+  width: 100vw;
+  background-color: var(--header-bg-color);
+}
+.logo h1 {
+  background-color: var(--btn-color);
+  color: var(--logo-title);
+  font-size: 25px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 0;
+  padding: 5px 20px;
+}
+.content nav ul {
+  display: flex;
+  gap: 10px;
+}
+.end {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mode svg {
+  margin-top: 3px;
+}
+
+.content nav ul a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--nav-title-color);
+  transition: all 0.5s;
+}
+.content nav ul a:hover {
+  background-color: var(--header-hover-color);
+}
+
+.content .active {
+  padding: 5px 10px;
+  background: var(--active-color);
+  color: var(--active-title-color);
+  border-radius: 5px;
+}
+.content .active:hover {
+  padding: 5px 10px;
+  background: var(--active-color);
+  color: var(--active-title-color);
+  border-radius: 5px;
+}
+
+main {
+  background: var(--body-bg-color);
+  height: max-content;
+  width: 100vw;
+  padding-top: 70px;
+}
+.main-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

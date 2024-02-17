@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cart {
+  height: 100vh;
+}
+
+body {
+  font-family: sans-serif;
+  position: relative;
+  background-color: var(--body-bg-color);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
