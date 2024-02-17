@@ -13,9 +13,11 @@
   --nav-title-color: #071935;
   --prise-color:#dbe1ff;
   --red:red;
+  --long-hover:lightgray;
 }
 
 [data-theme="light"]{
+  --long-hover:lightgray;
   --red:rgb(211, 121, 121);
   --card-title-home:#f0f6ff:
   --body-bg-color: white;
@@ -33,6 +35,7 @@
 }
 
 [data-theme="dark"] {
+  --long-hover:rgb(0, 0, 0);
   --red:rgb(172, 86, 86);
  --prise-color:#b573aa;
  --card-title-home:#f3f6fc;

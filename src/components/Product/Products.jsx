@@ -70,7 +70,9 @@ function Products() {
                   <>
                     {oneActive ? (
                       <>
-                        <div className="card-log shadow-xl">
+                        <div key={el.id}  onClick={() => {
+                            hendalclick(el.id);
+                          }} className="card-log shadow-xl">
                           <img src={el.attributes.image} alt="Movie" />
 
                           <h2 className="card-title">{el.attributes.title}</h2>

@@ -9,7 +9,7 @@ function Cart() {
   return (
     <>
       {products ? (
-        <>
+        <div className="card-wrapper">
           <section>
             {products.map((el) => {
               return (
@@ -36,7 +36,7 @@ function Cart() {
               );
             })}
           </section>
-        </>
+        </div>
       ) : (
         <>
           <div className="not-card">

@@ -107,7 +107,7 @@
   align-items: start;
   justify-content: space-between;
   width: 700px;
-  box-shadow: 5px 5px 10px lightgray;
+  box-shadow: 5px 5px 10px var(--long-hover);
   padding: 20px;
   border-radius: 10px;
   transition: all 0.5s;
@@ -145,4 +145,7 @@ h4 {
 }
 .card-caunt h4 {
   color: var(--red);
+}
+.card-wrapper {
+  height: 100vh;
 }
