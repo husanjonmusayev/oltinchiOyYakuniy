@@ -1,6 +1,7 @@
-.card-wrapper {
+.get-local {
   display: flex;
   justify-content: space-between;
+  height: 100vh;
 }
 .Calculation {
   border: 2px solid var(--long-hover);
@@ -57,7 +58,7 @@
   border-bottom: 1px solid var(--card-title-home);
 }
 @media (max-width: 1200px) {
-  .card-wrapper {
+  .get-local {
     height: auto;
     display: flex;
     margin: 0;
@@ -70,7 +71,7 @@
   }
   .pages button {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   #CardItem {
     width: 100%;

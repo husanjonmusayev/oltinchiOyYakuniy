@@ -1,16 +1,16 @@
 import React from "react";
 import "./cart.css";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 function Cart() {
+  let sum = 0;
+  const [sumAll, setSumAll] = useState(null);
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
 
-  function hendalLoginClick() {
-    navigate("/loginSignIn");
-  }
+
+  
 
   let allProduct = JSON.parse(localStorage.getItem("prod"))
     ? JSON.parse(localStorage.getItem("prod"))
@@ -19,9 +19,19 @@ function Cart() {
   //  get product localstorage
 
   useEffect(() => {
-    setProducts(JSON.parse(localStorage.getItem("prod")));
+    let data = JSON.parse(localStorage.getItem("prod"));
+    if (data.length) {
+      setSumAll(
+        data.map((el) => {
+          return (sum += el.price);
+        })
+      );
+    }
+    setProducts(data);
   }, []);
 
+  let Shopping = sumAll % 8;
+  let Tax = sumAll % 20;
   // remove function
 
   const notify = (el) => {
@@ -44,28 +54,28 @@ function Cart() {
   return (
     <>
       {products.length ? (
-        <div className="card-wrapper">
+        <div className="get-local">
           <ToastContainer />
           <div className="pages">
             <div className="Calculation sheet">
               <div className="thum">
                 <p>Subtotal</p>
-                <p>prise</p>
+                <p>{sumAll} $</p>
               </div>
               <div className="thum">
-                <p>Shipping</p>
-                <p>prise</p>
+                <p>Shopping</p>
+                <p>{Shopping} $</p>
               </div>
               <div className="thum">
                 <p>Tax</p>
-                <p>prise</p>
+                <p>{Tax}$</p>
               </div>
               <div className="all-sum">
                 <p>Order Total</p>
-                <p>prise</p>
+                <p>{sumAll + Shopping + Tax} $</p>
               </div>
             </div>
-            <button onClick={hendalLoginClick}>PLASE LOGIN</button>
+            <button >PLASE LOGIN</button>
           </div>
           <section>
             {products.map((el) => {

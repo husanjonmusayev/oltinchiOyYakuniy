@@ -12,10 +12,12 @@ const options = [
 ];
 
 function LayoutRoutes() {
-  const [caunt, setCaunt] = useState(0);
+  const [showBar, setShowBar] = useState(false);
+  const [caunt, setCaunt] = useState(1);
   const [data, setData] = useState([]);
   const [dark, setDark] = useLocalStorage("dark", false);
   const [isChecked, setIsChecked] = useState(false);
+  const [isCheck, setIsCheck] = useState(false);
   const [lang, setLang] = useState("en");
   const { t, i18n } = useTranslation();
   const [selectedOption, setSelectedOption] = useState(null);
@@ -33,7 +35,7 @@ function LayoutRoutes() {
     if (dat) {
       setCaunt(dat.length);
     }
-  }, [data]);
+  }, []);
 
   // dark mode
   function hendalChekbox(e) {
@@ -45,6 +47,12 @@ function LayoutRoutes() {
   function hendalclick(e) {
     i18n.changeLanguage(e.value);
     localStorage.setItem("lang", e.value);
+  }
+
+  // Show Nav bar function
+  function hendalshowNavbar(e) {
+    setIsCheck(e.target.checked);
+    isCheck ? setShowBar(false) : setShowBar(true);
   }
 
   //
@@ -65,8 +73,12 @@ function LayoutRoutes() {
         <div className="content">
           <div className="responsive-nav">
             <label className="btn btn-circle swap swap-rotate">
-              {/* this hidden checkbox controls the state */}
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                value="synthwave"
+                onChange={hendalshowNavbar}
+                checked={isCheck}
+              />
 
               <svg
                 className="swap-off fill-current"
@@ -88,11 +100,32 @@ function LayoutRoutes() {
                 <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
               </svg>
             </label>
+            {showBar && (
+              <div className="bars">
+                <nav>
+                  <ul>
+                    <li>
+                      <NavLink to="/">{t("home")}</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/about">{t("about")}</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/product">{t("products")}</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/cart">{t("cart")}</NavLink>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            )}
           </div>
+
           <div className="logo">
             <h1>C</h1>
           </div>
-          <nav>
+          <nav className="navBar">
             <ul>
               <li>
                 <NavLink to="/">{t("home")}</NavLink>

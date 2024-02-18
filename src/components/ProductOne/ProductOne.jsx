@@ -5,13 +5,15 @@ import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
 function ProductOne() {
-  const productRef = useRef(0);
+  const productRef = useRef(1);
   const productId = useLocation();
   const [data, setdata] = useState(null);
 
   let allProduct = JSON.parse(localStorage.getItem("prod"))
     ? JSON.parse(localStorage.getItem("prod"))
     : [];
+
+// get one product 
 
   useEffect(() => {
     fetch(
@@ -20,6 +22,8 @@ function ProductOne() {
       .then((res) => res.json())
       .then((data) => setdata(data.data));
   }, []);
+
+// alert message 
 
   const notify = () => {
     toast.success(" item added to card", {

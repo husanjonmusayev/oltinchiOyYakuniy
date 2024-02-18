@@ -12,8 +12,7 @@ import Cart from "./components/Cart/Cart";
 import LayoutRoutes from "./Layout/LayoutRoutes";
 import ProductOne from "./components/ProductOne/ProductOne";
 import NoutFound from "./components/Noutfound/NoutFound";
-import SignIn from "./components/Login/SignIn";
-import SiginUp from "./components/Login/SiginUp";
+
 
 function App() {
   const routes = createBrowserRouter(
@@ -25,8 +24,6 @@ function App() {
         <Route path="/product" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/productid" element={<ProductOne />} />
-        <Route path="/loginSignIn" element={<SignIn />} />
-        <Route path="/loginSignUp" element={<SiginUp />} />
       </Route>
     )
   );

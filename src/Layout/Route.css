@@ -2,6 +2,27 @@
   width: 100vw;
 }
 
+.bars {
+  cursor: pointer;
+  position: absolute;
+  width: 150px;
+  height: auto;
+  background-color: white;
+  left: 0px;
+  top: 50px;
+  background-color: var(--header-bg-color);
+  z-index: 1000;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: var(--active-title-color);
+}
+
+.responsive-nav {
+  display: none;
+  position: relative;
+  padding-left: 50px;
+}
+
 .reg {
   margin: 0;
   padding: 10px;
@@ -23,9 +44,6 @@
 
 .form-link a:hover {
   border-bottom: 1px solid white;
-}
-.responsive-nav {
-  display: none;
 }
 
 .content {
@@ -49,7 +67,7 @@ header {
   margin: 0;
   padding: 5px 20px;
 }
-.content nav ul {
+.navBar ul {
   display: flex;
   gap: 10px;
 }
@@ -63,13 +81,23 @@ header {
   margin-top: 3px;
 }
 
-.content nav ul a {
+.bars nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bars nav ul a {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navBar ul a {
   padding: 5px 10px;
   border-radius: 5px;
   color: var(--nav-title-color);
   transition: all 0.5s;
 }
-.content nav ul a:hover {
+.navBar ul a:hover {
   background-color: var(--header-hover-color);
 }
 
@@ -120,7 +148,7 @@ main {
     display: none;
   }
 
-  .content nav {
+  .navBar {
     display: none;
   }
 }
