@@ -280,6 +280,28 @@ form {
     width: 180px;
   }
 }
+@media (max-width: 965px) {
+  .select-catigory {
+    width: 190px;
+  }
+  .search-input {
+    width: 180px;
+  }
+  .ran {
+    width: 250px;
+  }
+}
+@media (max-width: 934px) {
+  .select-catigory {
+    width: 170px;
+  }
+  .search-input {
+    width: 150px;
+  }
+  .ran {
+    width: 200px;
+  }
+}
 @media (max-width: 846px) {
   .products-wrapper {
     display: flex;
@@ -289,8 +311,8 @@ form {
   #card {
     width: 100%;
   }
-   #img{
- width: 100%;
+  #img {
+    width: 100%;
   }
   .form-header {
     display: flex;
@@ -307,6 +329,17 @@ form {
   }
   #ran {
     display: none;
+  }
+  .reset-btn {
+    padding: 5px 90px;
+  }
+  .search-btn {
+    padding: 5px 90px;
+  }
+  .btn-group {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
