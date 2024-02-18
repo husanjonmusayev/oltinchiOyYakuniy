@@ -6,7 +6,6 @@ import { ToastContainer, toast } from "react-toastify";
 function Cart() {
   let sum = 0;
   const [sumAll, setSumAll] = useState(null);
-  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
 
 
