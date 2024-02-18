@@ -47,7 +47,7 @@ function Home() {
                       hendalclick(el.id);
                     }}
                     key={el.id}
-                    className="card w-96 bg-base-100 shadow-xl"
+                    className="card w-100% bg-base-100 shadow-xl"
                   >
                     <figure className="px-5 pt-5">
                       <img
@@ -77,4 +77,4 @@ function Home() {
   );
 }
 
-export default Home; 
+export default Home;

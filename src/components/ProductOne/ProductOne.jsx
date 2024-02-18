@@ -5,10 +5,13 @@ import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
 function ProductOne() {
-  let allProduct = [];
   const productRef = useRef(0);
   const productId = useLocation();
   const [data, setdata] = useState(null);
+
+  let allProduct = JSON.parse(localStorage.getItem("prod"))
+    ? JSON.parse(localStorage.getItem("prod"))
+    : [];
 
   useEffect(() => {
     fetch(
@@ -22,7 +25,6 @@ function ProductOne() {
     toast.success(" item added to card", {
       position: "top-center",
       autoClose: 5000,
-
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,

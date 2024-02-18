@@ -81,8 +81,7 @@ function Products() {
     setValue(1000);
   }
 
-
-  // get range value  
+  // get range value
   const handleChange = (event) => {
     setValue(event.target.value);
   };
@@ -93,63 +92,67 @@ function Products() {
         <div className="products-all">
           <form>
             <div className="form-header ">
-              <div className="search-input">
-                <p>{t("search product")}</p>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  placeholder="Type here"
-                  class="input input-bordered input-sm w-full max-w-xs"
-                />
+              <div className="item">
+                <div className="search-input">
+                  <p>{t("search product")}</p>
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    placeholder="Type here"
+                    class="input input-bordered input-sm w-full max-w-xs"
+                  />
+                </div>
+                <div className="select-catigory">
+                  <p>{t("select catighory")}</p>
+                  <select
+                    ref={catigoryRef}
+                    className="select select-bordered select-sm w-full max-w-xs"
+                  >
+                    <option value="all">all</option>
+                    <option value="tables">Tables</option>
+                    <option value="chairs">Chairs</option>
+                    <option value="kids">Kids</option>
+                    <option value="sofas">Sofas</option>
+                    <option value="beds">Beds</option>
+                  </select>
+                </div>
               </div>
-              <div className="select-catigory">
-                <p>{t("select catighory")}</p>
-                <select
-                  ref={catigoryRef}
-                  className="select select-bordered select-sm w-full max-w-xs"
-                >
-                  <option value="all">all</option>
-                  <option value="tables">Tables</option>
-                  <option value="chairs">Chairs</option>
-                  <option value="kids">Kids</option>
-                  <option value="sofas">Sofas</option>
-                  <option value="beds">Beds</option>
-                </select>
-              </div>
-              <div className="select-catigory">
-                <p>{t("select company")}</p>
-                <select
-                  ref={celectConpanyRef}
-                  className="select select-bordered select-sm w-full max-w-xs"
-                >
-                  <option disabled selected>
-                    all
-                  </option>
-                  <option value="modenza">Modenza</option>
-                  <option value="luxsora">Luxsora</option>
-                  <option value="artifex">Artifex</option>
-                  <option value="comfora">Comfora</option>
-                  <option value="homested">Homested</option>
-                </select>
-              </div>
-              <div className="select-catigory">
-                <p>{t("sort by")}</p>
-                <select
-                  ref={cortRef}
-                  className="select select-bordered select-sm w-full max-w-xs"
-                >
-                  <option disabled selected>
-                    all
-                  </option>
-                  <option value="a-z">a-z</option>
-                  <option value="z-a">z-a</option>
-                  <option value="high">high</option>
-                  <option value="low">low</option>
-                </select>
+              <div className="item">
+                <div className="select-catigory">
+                  <p>{t("select company")}</p>
+                  <select
+                    ref={celectConpanyRef}
+                    className="select select-bordered select-sm w-full max-w-xs"
+                  >
+                    <option disabled selected>
+                      all
+                    </option>
+                    <option value="modenza">Modenza</option>
+                    <option value="luxsora">Luxsora</option>
+                    <option value="artifex">Artifex</option>
+                    <option value="comfora">Comfora</option>
+                    <option value="homested">Homested</option>
+                  </select>
+                </div>
+                <div className="select-catigory ">
+                  <p>{t("sort by")}</p>
+                  <select
+                    ref={cortRef}
+                    className="select select-bordered select-sm w-full max-w-xs"
+                  >
+                    <option disabled selected>
+                      all
+                    </option>
+                    <option value="a-z">a-z</option>
+                    <option value="z-a">z-a</option>
+                    <option value="high">high</option>
+                    <option value="low">low</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div className="form-main items-center mt-10">
-              <div className="ran">
+              <div id="ran" className="ran">
                 <div className="select-price">
                   <p>{t("select price")}</p>
                   <p>${value}0.00</p>
@@ -167,7 +170,10 @@ function Products() {
                   <p>Max : $ 1000.00 </p>
                 </div>
               </div>
-              <div className="form-control flex flex-col items-center">
+              <div
+                id="check"
+                className="form-control flex flex-col items-center"
+              >
                 <span className="label-text">{t("free")}</span>
                 <label className="cursor-pointer label ">
                   <input type="checkbox" className="checkbox checkbox-info" />
@@ -225,6 +231,7 @@ function Products() {
                           onClick={() => {
                             hendalclick(el.id);
                           }}
+                          id="card"
                           key={el.id}
                           className="card w-96 bg-base-100 shadow-xl"
                         >
@@ -232,6 +239,7 @@ function Products() {
                             <img
                               src={el.attributes.image}
                               alt="Shoes"
+                              id="img"
                               className="rounded-xl main-img"
                             />
                           </figure>

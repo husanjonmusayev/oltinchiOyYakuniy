@@ -24,6 +24,9 @@
 .form-link a:hover {
   border-bottom: 1px solid white;
 }
+.responsive-nav {
+  display: none;
+}
 
 .content {
   width: 1200px;
@@ -93,4 +96,84 @@ main {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .responsive-nav {
+    display: block;
+  }
+  .main-content {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .content nav {
+    display: none;
+  }
+}
+@media (max-width: 945px) {
+  .App {
+    display: none;
+  }
+  .content {
+    width: 800px;
+  }
+  .responsive-nav {
+    display: block;
+  }
+  .main-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 845px) {
+  .content {
+    width: 600px;
+  }
+  .main-content {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 668px) {
+  .content {
+    width: 500px;
+  }
+  .main-content {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 540px) {
+  .content {
+    width: 300px;
+  }
+  .main-content {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mode {
+    display: none;
+  }
+  .reg {
+    display: none;
+  }
 }

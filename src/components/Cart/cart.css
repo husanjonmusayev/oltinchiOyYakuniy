@@ -46,3 +46,61 @@
   color: var(--white-title-color);
   font-weight: 500;
 }
+
+.not-card {
+  height: 100vh;
+}
+
+.not-card h2 {
+  font-size: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--card-title-home);
+}
+@media (max-width: 1200px) {
+  .card-wrapper {
+    height: auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+  .Calculation {
+    width: 100%;
+    margin: 0;
+  }
+  .pages button {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #CardItem {
+    width: 100%;
+  }
+}
+@media (max-width: 668px) {
+  #CardItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #awatar {
+    width: 100%;
+  }
+  #cardTitle h3,
+  p {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 20px;
+  }
+  #cardTitle {
+    display: block;
+  }
+  #cardCaunt p,
+  h4 {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 20px;
+  }
+  #cardCaunt {
+    display: block;
+  }
+}

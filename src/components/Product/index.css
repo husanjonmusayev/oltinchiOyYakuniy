@@ -242,7 +242,115 @@ form {
   background-color: var(--reset-btn-hover);
 }
 
+.item {
+  display: flex;
+  gap: 50px;
+}
+
 .btn-group {
   display: flex;
   gap: 20px;
+}
+@media (max-width: 1200px) {
+  .range input {
+    width: 200px;
+  }
+  .item {
+    display: flex;
+    gap: 30px;
+  }
+  .ran {
+    width: 200px;
+  }
+  .select-catigory {
+    width: 180px;
+  }
+}
+@media (max-width: 1000px) {
+  #check {
+    display: none;
+  }
+  .btn-group {
+    display: flex;
+  }
+  .select-catigory {
+    width: 150px;
+  }
+  .search-input {
+    width: 180px;
+  }
+}
+@media (max-width: 846px) {
+  .products-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #card {
+    width: 100%;
+  }
+   #img{
+ width: 100%;
+  }
+  .form-header {
+    display: flex;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+  .select-catigory {
+    width: 250px;
+  }
+  .search-input {
+    width: 250px;
+  }
+  #ran {
+    display: none;
+  }
+}
+
+@media (max-width: 668px) {
+  .form-header {
+    display: flex;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+  .select-catigory {
+    width: 150px;
+  }
+  .search-input {
+    width: 150px;
+  }
+
+  .search-btn {
+    padding: 5px 50px;
+  }
+  .reset-btn {
+    padding: 5px 50px;
+  }
+}
+@media (max-width: 548px) {
+  .form-header {
+    display: flex;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+  .select-catigory {
+    width: 130px;
+  }
+  .search-input {
+    width: 130px;
+  }
+
+  .search-btn {
+    padding: 5px 40px;
+  }
+  .reset-btn {
+    padding: 5px 40px;
+  }
 }
