@@ -183,3 +183,66 @@ card-log h2 {
   width: 300px;
   overflow: hidden;
 }
+form {
+  padding: 30px 30px;
+  background-color: var(--header-bg-color);
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.form-header {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-header p {
+  margin-bottom: 5px;
+}
+.select-catigory {
+  width: 250px;
+}
+.form-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range input {
+  width: 300px;
+}
+.ran {
+  width: 300px;
+}
+
+.search-btn {
+  background-color: var(--btn-color);
+  padding: 5px 100px;
+  border-radius: 10px;
+  color: var(--logo-title);
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.search-btn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.reset-btn {
+  background-color: var(--reset-btn);
+  padding: 5px 100px;
+  border-radius: 10px;
+  color: var(--logo-title);
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.reset-btn:hover {
+  background-color: var(--reset-btn-hover);
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+}

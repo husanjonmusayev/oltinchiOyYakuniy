@@ -11,6 +11,7 @@
       "search product": "Search Product",
       "select catighory": "Select catigory",
       "select company": "Select Company",
+      "select price": "Select price",
       "sort by": "Sort By",
       "free": "free",
       "search": "Search",
@@ -32,7 +33,8 @@
       "sort by": "Сортировать по",
       "free": "бесплатно",
       "search": "Поиск",
-      "reset": "Перезагрузить"
+      "reset": "Перезагрузить",
+      "select price": "Выберите цену"
     }
   },
 
@@ -51,7 +53,8 @@
       "sort by": "Turi bo'yicha",
       "free": "Bepul",
       "search": "Qidirish",
-      "reset": "Tozalash"
+      "reset": "Tozalash",
+      "select price": "Narhni tanlang"
     }
   }
 }

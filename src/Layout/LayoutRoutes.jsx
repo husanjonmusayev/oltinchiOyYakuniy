@@ -12,6 +12,7 @@ const options = [
 ];
 
 function LayoutRoutes() {
+  const [data, setData] = useState([]);
   const [dark, setDark] = useLocalStorage("dark", false);
   const [isChecked, setIsChecked] = useState(false);
   const [lang, setLang] = useState("en");
@@ -21,12 +22,15 @@ function LayoutRoutes() {
   // localstorage get  languga
 
   useEffect(() => {
+    setData(JSON.parse(localStorage.getItem("prod")));
     let lang = localStorage.getItem("lang");
     if (lang) {
       i18n.changeLanguage(lang);
       setLang(lang);
     }
-  }, []);
+  }, [data]);
+
+  let length = data.length;
 
   // dark mode
   function hendalChekbox(e) {
@@ -108,7 +112,9 @@ function LayoutRoutes() {
             </div>
             <Link to="/cart">
               <div className="indicator">
-                <span className="indicator-item badge badge-primary">+1</span>
+                <span className="indicator-item badge badge-primary">
+                  +{length}
+                </span>
                 <div className="grid w-12 h-12  place-items-center">
                   <img className="w-10 h-9" src="/shop.png" alt="" />
                 </div>
