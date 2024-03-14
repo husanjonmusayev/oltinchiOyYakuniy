@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import useLocalStorage from "use-local-storage";
 import { useTranslation } from "react-i18next";
 import Select from "react-select";
+import { useSelector } from "react-redux";
 
 const options = [
   { value: "uz", label: "Uz" },
@@ -21,6 +22,8 @@ function LayoutRoutes() {
   const [lang, setLang] = useState("en");
   const { t, i18n } = useTranslation();
   const [selectedOption, setSelectedOption] = useState(null);
+
+  const product = useSelector((state) => state.counter.value);
 
   // localstorage get  languga
 
@@ -175,7 +178,7 @@ function LayoutRoutes() {
             <Link to="/cart">
               <div className="indicator">
                 <span className="indicator-item badge badge-primary">
-                  +{caunt}
+                  +{product}
                 </span>
                 <div className="grid w-12 h-12  place-items-center">
                   <img className="w-10 h-9" src="/shop.png" alt="" />

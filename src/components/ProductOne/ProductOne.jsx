@@ -3,17 +3,21 @@ import { useEffect, useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
+import { useSelector, useDispatch } from "react-redux";
+import { increment } from "../../Redux/order";
 
 function ProductOne() {
   const productRef = useRef(1);
   const productId = useLocation();
   const [data, setdata] = useState(null);
+  const product = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
   let allProduct = JSON.parse(localStorage.getItem("prod"))
     ? JSON.parse(localStorage.getItem("prod"))
     : [];
 
-// get one product 
+  // get one product
 
   useEffect(() => {
     fetch(
@@ -23,7 +27,7 @@ function ProductOne() {
       .then((data) => setdata(data.data));
   }, []);
 
-// alert message 
+  // alert message
 
   const notify = () => {
     toast.success(" item added to card", {
@@ -35,6 +39,7 @@ function ProductOne() {
       progress: undefined,
       theme: "light",
     });
+    dispatch(increment())
     let product = {
       img: data.attributes.image,
       name: data.attributes.title,

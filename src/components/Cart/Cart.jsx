@@ -2,14 +2,15 @@ import React from "react";
 import "./cart.css";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { useSelector } from "react-redux";
 
 function Cart() {
+  const product = useSelector((state) => state.counter.value);
+  console.log(product);
+
   let sum = 0;
   const [sumAll, setSumAll] = useState(null);
   const [products, setProducts] = useState([]);
-
-
-  
 
   let allProduct = JSON.parse(localStorage.getItem("prod"))
     ? JSON.parse(localStorage.getItem("prod"))
@@ -19,7 +20,7 @@ function Cart() {
 
   useEffect(() => {
     let data = JSON.parse(localStorage.getItem("prod"));
-    if (data.length) {
+    if (data) {
       setSumAll(
         data.map((el) => {
           return (sum += el.price);
@@ -52,7 +53,7 @@ function Cart() {
 
   return (
     <>
-      {products.length ? (
+      {products ? (
         <div className="get-local">
           <ToastContainer />
           <div className="pages">
@@ -74,7 +75,7 @@ function Cart() {
                 <p>{sumAll + Shopping + Tax} $</p>
               </div>
             </div>
-            <button >PLASE LOGIN</button>
+            <button>PLASE LOGIN</button>
           </div>
           <section>
             {products.map((el) => {
